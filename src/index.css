@@ -36,21 +36,37 @@
   flex-direction: column;
 }
 .inputDiv {
-  width: 50%;
-  height: 10%;
+  width: 100%;
+  height: 15%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   margin: auto;
 }
 
-.inputDiv input {
+.inputDiv .input {
+  width: 40%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+input {
   width: 90%;
   height: 100%;
   border-radius: 10px;
   padding: 10px;
 }
-
+.time {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  justify-content: space-evenly;
+  font-weight: 900;
+  align-items: center;
+}
 .searchIcon {
   font-size: 20px;
 }
@@ -113,6 +129,9 @@
   border-radius: 20px;
 }
 @media (max-width: 800px) {
+  .weatherDiv {
+    padding: 10px;
+  }
   .herSection {
     flex-direction: column;
   }
@@ -131,10 +150,22 @@
   .extras {
     width: 100%;
   }
+  .inputDiv {
+    padding: 0px;
+  }
+  .input {
+    width: 50%;
+  }
+  .time {
+    flex-direction: column;
+  }
 }
 @media (max-width: 600px) {
+  .time {
+    font-size: 12px;
+  }
   .inputDiv {
-    width: 90%;
+    padding: 0px;
   }
   .line {
     display: none;

@@ -4,6 +4,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BsClouds } from "react-icons/bs";
 import { FaWind } from "react-icons/fa";
+import { SlCalender } from "react-icons/sl";
+import { FaClock } from "react-icons/fa";
 
 import weatherImagesData from "./Data";
 import { useState } from "react";
@@ -19,7 +21,6 @@ function App() {
       .then((finalRes) => {
         if (finalRes.cod === "404") {
           setWeatherData(null);
-          setCityName("");
           toast("City not found!");
         } else {
           setWeatherData(finalRes);
@@ -31,10 +32,36 @@ function App() {
     if (cityName) {
       getData();
       console.log(weatherData);
-      setCityName("");
     } else {
       toast("fill city name!");
     }
+  }
+  function getCurrentDate() {
+    const now = new Date();
+
+    // Options for date formatting
+    const dateOptions = { year: "numeric", month: "long", day: "numeric" };
+    const timeOptions = {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    };
+
+    // Formatting date and time
+    const date = now.toLocaleDateString(undefined, dateOptions);
+    const time = now.toLocaleTimeString(undefined, timeOptions);
+
+    return `${date}`;
+  }
+  function getCurrentTime() {
+    const now = new Date();
+    const timeOptions = {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    };
+    const time = now.toLocaleTimeString(undefined, timeOptions);
+    return `${time}`;
   }
 
   return (
@@ -52,13 +79,26 @@ function App() {
         <div className="header">Weather App ⛅ </div>
         <div className="weatherDiv">
           <div className="inputDiv">
-            <input
-              type="text"
-              placeholder="Enter City"
-              value={cityName}
-              onChange={(e) => setCityName(e.target.value)}
-            />
-            <FaSearchLocation className="searchIcon" onClick={handelSubmit} />
+            <div className="input">
+              <input
+                type="text"
+                placeholder="Enter City"
+                value={cityName}
+                onChange={(e) => setCityName(e.target.value)}
+              />
+              <FaSearchLocation className="searchIcon" onClick={handelSubmit} />
+            </div>
+
+            <div className="time">
+              <p>
+                <SlCalender />
+                {`  ${getCurrentDate()}`}
+              </p>
+              <p>
+                <FaClock />
+                {` ${getCurrentTime()}`}
+              </p>
+            </div>
           </div>
 
           <div className="herSection">
