@@ -81,7 +81,7 @@ function App() {
               ) : (
                 <h2>No Data To Show!</h2>
               )}
-              {weatherData != null ? <hr /> : null}
+              {weatherData != null ? <hr className="line" /> : null}
               {weatherData != null ? (
                 <>
                   <p>
@@ -101,25 +101,25 @@ function App() {
             <div className="extras">
               {weatherData != null ? (
                 <>
-                  <div className="Clouds">
+                  <div className="Clouds extraFeatures">
                     <h3>
                       <BsClouds /> Clouds
                     </h3>
                     <h3>{weatherData.clouds.all}%</h3>
                   </div>
-                  <div className="Wind">
+                  <div className="Wind extraFeatures">
                     <h3>
                       <FaWind /> Wind
                     </h3>
                     <h3>{weatherData.wind.speed} m/s</h3>
                   </div>
-                  <div className="Weather">
+                  <div className="Weather extraFeatures">
                     <h3>
                       <FaWind /> Weather
                     </h3>
                     <h3>{weatherData.weather[0].main}</h3>
                   </div>
-                  <div className="Weather">
+                  <div className="Pressure extraFeatures">
                     <h3>Pressure</h3>
                     <h3>{weatherData.main.pressure}</h3>
                   </div>
