@@ -6,13 +6,11 @@ let weatherImagesData = {
   drizzle:
     "https://i2-prod.belfastlive.co.uk/incoming/article19577284.ece/ALTERNATES/s1200b/2_GettyImages-1230171974.jpg",
   rain: "https://img.freepik.com/free-photo/weather-effects-composition_23-2149853295.jpg",
-  snowy:
-    "https://st2.depositphotos.com/1363168/9872/i/950/depositphotos_98723870-stock-photo-winter-background-with-snowy-weather.jpg",
+  snow: "https://st2.depositphotos.com/1363168/9872/i/950/depositphotos_98723870-stock-photo-winter-background-with-snowy-weather.jpg",
   smoke:
     "https://img.freepik.com/free-photo/empty-road-dark-atmosphere_23-2150914154.jpg",
   hail: "https://media.greenmatters.com/brand-img/T3Hl6mgb1/0x0/why-does-it-hail-in-the-summer-1594219216873.jpg",
-  windy:
-    "https://352today.sagacom.com/files/2024/02/Sunny-windy-weekend-1200x768.jpg",
+  wind: "https://352today.sagacom.com/files/2024/02/Sunny-windy-weekend-1200x768.jpg",
   tornado: "https://s.w-x.co/wu/coniglio-imperial-5.27.19-835px.jpeg",
   thunderstorm:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfZVt3jPo_6F78fBNsaybXjuRv6ykWZqi8Xw&s",
